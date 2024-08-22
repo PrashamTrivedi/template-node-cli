@@ -58,7 +58,7 @@ jobs:
       env:
         INFO: ${{ steps.fetch-repo-and-user-details.outputs.result }}
       run: |
-        find . -type f -not -path './.git/*' -exec sed -i 's/REPO_NAME/${{ github.event.repository.name }}/g' {} +
+        find . -type f -not -path './.git/*' -exec sed -i 's/TEMPLATE_REPO_NAME/${{ github.event.repository.name }}/g' {} +
 
     - name: Cleanup
       run: |
